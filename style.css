@@ -52,6 +52,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
     background: rgba(0, 0, 0, 0.952);
     font-family: 'Poppins', sans-serif;
@@ -67,7 +70,6 @@ header{
     height: 90px;
     background: #000000cc;
     padding: 15px 35px;
-    z-index: 1000;
 }
 a{
     text-decoration: none;
@@ -210,7 +212,7 @@ li{
     overflow: hidden;
 }
 .project_box > div:hover{
-    box-shadow: 0 0 20px #e68341ee;
+    box-shadow: 0 0 25px #e68341ee;
     transition: 0.5s;
 }
 h3{
@@ -256,11 +258,11 @@ h3{
     color: #000;
     border-radius: 50%;
     background-color: #fff;
-    box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 10px #fff;
 }
 address > ul >li:hover{
     background-color: #e68341ee;
-    box-shadow: 0 0 15px #e68341ee;
+    box-shadow: 0 0 18px #e68341ee;
     transition: 0.5s;
 }
 .contact-item > ul > li > a > img{
@@ -268,5 +270,47 @@ address > ul >li:hover{
 }
 /* ---- END CONTACTS CONTAINER ---- */
 
+
 /* ---- Adaptive layout ---- */
-@media 
+
+/* -- Media 1920px -- */
+@media (max-width: 1920px){
+    .my_text{
+        font-size: 1.3em;
+    }
+    .my_photo{
+        width: 350px;
+        height: 350px;
+    }
+    .my_photo > img{
+        width: 190px;
+    }
+    .cv_link{
+        line-height: 1.4;
+        font-size: 1.9em;
+    }
+    .projects_container > div{
+        padding: 2vh 5vh;
+    }
+    .project_img{
+        width: 300px;;
+    }
+    h3{
+        padding: 7px;
+        font-size: 1.2em;
+    }
+    .contact-info{
+        font-size: 1.5em;
+    }
+    .contact-item > ul >li{
+        width: 80px;
+        height: 80px;
+        margin: 10px 40px;
+        font-size: 20px;
+    }
+    .contact-item > ul > li > a > img{
+        width: 80px;
+    }
+}
+
+/* -- Media px -- */
