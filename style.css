@@ -287,7 +287,7 @@ address > ul >li:hover{
     }
     .cv_link{
         line-height: 1.4;
-        font-size: 1.9em;
+        font-size: 1.5em;
     }
     .projects_container > div{
         padding: 2vh 5vh;
@@ -300,16 +300,16 @@ address > ul >li:hover{
         font-size: 1.2em;
     }
     .contact-info{
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     .contact-item > ul >li{
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
         margin: 10px 40px;
         font-size: 20px;
     }
     .contact-item > ul > li > a > img{
-        width: 80px;
+        width: 75px;
     }
 }
 
