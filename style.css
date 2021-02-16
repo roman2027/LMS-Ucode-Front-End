@@ -1,0 +1,272 @@
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 16px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: rgba(0, 0, 0, 0.952);
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.952);
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e6834173;
+}
+
+/* Стрелки */
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+        linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background:
+        linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background:
+        linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgba(0, 0, 0, 0.952);
+    font-family: 'Poppins', sans-serif;
+}
+/* ---- START HEADER ---- */
+header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    background: #000000cc;
+    padding: 15px 35px;
+    z-index: 1000;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+h1{
+    color: #e9e9e9;
+    font-size: 1.6em;
+    font-weight: 500;
+    line-height: 1;
+}
+.specialty{
+    color: #bdbdbde8;
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: 1;
+}
+li{
+    list-style: none;
+}
+#menu > ul > li{
+    display: inline-block;
+}
+#menu > ul > li > a{
+    margin: 0 10px;
+    font-size: 1.2em;
+    line-height: 1;
+    display: inline-block;
+    color: #e68341ee;
+    text-decoration:none;
+    cursor: pointer;
+}
+#menu > ul > li > a::after{
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #e68341ee;
+    transition: width .4s ease-in-out;
+}
+#menu > ul > li > a:hover::after, #menu > ul > li > a:focus::after{
+    width: 100%;
+}
+/* ---- END HEADER ---- */
+
+/* ---- START ABOUT CONTAINER ---- */
+.about_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.text_about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding-left: 10%;
+}
+.my_text{
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.5em;
+}
+.photo_about{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+}
+.my_photo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 450px;
+    height: 450px;
+    border: 3px solid #e68341ee;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.my_photo:hover{
+    border: 3px solid #fff;
+    transition: 0.5s;
+    box-shadow: 0px 0px 35px #e68341;
+}
+.my_photo > img{
+    width: 250px;
+}
+/* ---- END ABOUT CONTAINER ---- */
+
+/* ---- START CV CONTAINER ---- */
+.cv_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cv_container > span > a{
+    color: #e68341ee;
+    border-bottom: 3px solid #e68341ee;
+}
+.cv_link{
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 2em;
+}
+.cv_link:hover > a{
+    background: #c2b5b5;
+    color: #000;
+    border-bottom: 3px solid #e68341ee;
+    transition: 0.5s;
+}
+/* ---- END CV CONTAINER ---- */
+
+/* ---- START PROJECTS CONTAINER ---- */
+.projects_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+.projects_container > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    padding: 3vh 5vh;
+}
+.project_box > div{
+    border: 2px solid #e68341ee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.project_box > div:hover{
+    box-shadow: 0 0 20px #e68341ee;
+    transition: 0.5s;
+}
+h3{
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    padding: 8px;
+    font-size: 1.4em;
+}
+.project_img{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    border-radius: 15px;
+}
+/* ---- END PROJECTS CONTAINER ---- */
+
+/* ---- START CONTACTS CONTAINER ---- */
+.contacts_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+.contact-item > ul >li{
+    width: 100px;
+    height: 100px;
+    list-style: none;
+    display: inline-block;
+    margin: 10px 40px;
+    font-size: 20px;
+    color: #000;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 8px #fff;
+}
+address > ul >li:hover{
+    background-color: #e68341ee;
+    box-shadow: 0 0 15px #e68341ee;
+    transition: 0.5s;
+}
+.contact-item > ul > li > a > img{
+    width: 100px;
+}
+/* ---- END CONTACTS CONTAINER ---- */
+
+/* ---- Adaptive layout ---- */
+@media 
