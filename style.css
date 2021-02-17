@@ -152,9 +152,9 @@ li{
     border: 3px solid #e68341ee;
     border-radius: 50%;
     overflow: hidden;
+    transition: box-shadow 0.5s;
 }
 .my_photo:hover{
-    transition: 0.5s;
     box-shadow: 0px 0px 30px #fff;
 }
 .my_photo > img{
@@ -170,20 +170,21 @@ li{
     align-items: center;
     justify-content: center;
 }
-.cv_container > span > a{
-    color: #e68341ee;
-    border-bottom: 3px solid #e68341ee;
-}
 .cv_link{
     color: #fff;
     line-height: 1.6;
     text-align: center;
     font-size: 2em;
 }
-.cv_link:hover > a{
+.cv_link > a{
+    color: #e68341ee;
+    border-bottom: 3px solid #e68341ee;
+    transition: background 0.5s;
+    border-radius: 5px 5px 0 0;
+}
+.cv_link > a:hover{
     background: #c2b5b5;
     color: #000;
-    transition: 0.5s;
 }
 /* ---- END CV CONTAINER ---- */
 
@@ -208,10 +209,10 @@ li{
     border: 2px solid #e68341ee;
     border-radius: 20px;
     overflow: hidden;
+    transition: box-shadow 0.7s;
 }
 .project_box > div:hover{
     box-shadow: 0 0 25px #e68341ee;
-    transition: 0.5s;
 }
 h3{
     color: #fff;
@@ -237,6 +238,17 @@ h3{
     justify-content: center;
     flex-direction: column;
 }
+.contacts_container > div{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 5vh;
+}
+.contacts_container > div > img{
+    width: 250px;
+    height: 250px;
+}
 .contact-info{
     display: flex;
     align-items: center;
@@ -254,13 +266,15 @@ h3{
     font-size: 20px;
     color: #000;
     border-radius: 50%;
-    background-color: #fff;
+    background: #fff;
     box-shadow: 0 0 10px #fff;
+    transition: box-shadow 0.6s;
+    transition: background-color 0.6s;
 }
 address > ul >li:hover{
-    background-color: #e68341ee;
+    background: #e68341ee;
     box-shadow: 0 0 18px #e68341ee;
-    transition: 0.5s;
+    /* transition: background-color 0.6s; */
 }
 .contact-item > ul > li > a > img{
     width: 100px;
@@ -301,7 +315,7 @@ address > ul >li:hover{
         padding: 2vh 5vh;
     }
     .project_img{
-        width: 300px;;
+        width: 300px;
     }
     h3{
         padding: 7px;
@@ -316,6 +330,14 @@ address > ul >li:hover{
     }
     .contact-item > ul > li > a > img{
         width: 75px;
+    }
+    .contacts_container > div{
+        width: 200px;
+        height: 200px;
+    }
+    .contacts_container > div > img{
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -362,7 +384,7 @@ address > ul >li:hover{
         line-height: 1.4;
         font-size: 1.3em;
     }
-    .cv_container > span > a{
+    .cv_link > a{
         border-bottom: 2px solid #e68341ee;
     }
     .projects_container > div{
@@ -389,6 +411,14 @@ address > ul >li:hover{
     }
     .contact-item > ul > li > a > img{
         width: 70px;
+    }
+    .contacts_container > div{
+        width: 180px;
+        height: 180px;
+    }
+    .contacts_container > div > img{
+        width: 180px;
+        height: 180px;
     }
 }
 
@@ -479,8 +509,81 @@ address > ul >li:hover{
 
 /* -- Media (max-width: 480px) -- */
 @media screen and (max-width: 480px){
-    
-}
+    header{
+        justify-content: center;
+        flex-direction: column;
+        height: 100px;
+        background: #000000cc;
+        padding: 3px 6px;
+    }
+    h1{
+        margin-bottom: 6px;
+    }
+    .specialty{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .name_container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #menu > ul > li > a{
+        margin: 0 18px;
+    }
+    .my_text{
+        font-size: 1.05em;
+        padding: 5px 10px;
+    }
+    .photo_about{
+        margin-bottom: 0px;
+        padding: 30px 0 50px 0;
+    }
+    .my_photo{
+        align-items: center;
+        width: 320px;
+        height: 320px;
+    }
+    .my_photo > img{
+        width: 170px;
+        position: relative;
+        top: 15px;
+    }
+    .projects_container{
+        height: auto;
+        flex-direction: column;
+    }
+    .projects_container > div{
+        flex-direction: column;
+        padding: 0;
+    }
+    .start_project{
+        margin-top: 100px;
+    }
+    .project_box{
+        margin-bottom: 15px;
+    }
+    .project_img{
+        width: 340px;
+    }
+    .contacts_container > div{
+        margin-top: 90px;
+    }
+    .contact-item > ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    .contact-item > ul >li{
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        margin: 15px 25px;
+    }
+    .contact-item > ul > li > a > img{
+        width: 60px;
+    }
 
 /* -- Media (max-width: 320px) -- */
 @media screen and (max-width: 320px){
