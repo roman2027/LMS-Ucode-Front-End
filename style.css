@@ -529,7 +529,7 @@ address > ul >li:hover{
         flex-direction: column;
     }
     #menu > ul > li > a{
-        margin: 0 18px;
+        margin: 0 12px;
     }
     .my_text{
         font-size: 1.05em;
@@ -548,6 +548,7 @@ address > ul >li:hover{
         width: 170px;
         position: relative;
         top: 15px;
+        overflow: hidden;
     }
     .projects_container{
         height: auto;
