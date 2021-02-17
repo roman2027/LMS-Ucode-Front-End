@@ -1,6 +1,6 @@
 /* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
-    width: 16px; /* ширина для вертикального скролла */
+    width: 15px; /* ширина для вертикального скролла */
     height: 8px; /* высота для горизонтального скролла */
     background-color: rgba(0, 0, 0, 0.952);
 }
@@ -67,7 +67,7 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 90px;
+    height: 100px;
     background: #000000cc;
     padding: 15px 35px;
 }
@@ -77,15 +77,15 @@ a{
 }
 h1{
     color: #e9e9e9;
-    font-size: 1.6em;
+    font-size: 1.7em;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.1;
 }
 .specialty{
     color: #bdbdbde8;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.1;
 }
 li{
     list-style: none;
@@ -154,9 +154,8 @@ li{
     overflow: hidden;
 }
 .my_photo:hover{
-    border: 3px solid #fff;
     transition: 0.5s;
-    box-shadow: 0px 0px 35px #e68341;
+    box-shadow: 0px 0px 30px #fff;
 }
 .my_photo > img{
     width: 250px;
@@ -184,7 +183,6 @@ li{
 .cv_link:hover > a{
     background: #c2b5b5;
     color: #000;
-    border-bottom: 3px solid #e68341ee;
     transition: 0.5s;
 }
 /* ---- END CV CONTAINER ---- */
@@ -246,12 +244,11 @@ h3{
     flex-direction: column;
     color: #fff;
     margin-bottom: 50px;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .contact-item > ul >li{
     width: 100px;
     height: 100px;
-    list-style: none;
     display: inline-block;
     margin: 10px 40px;
     font-size: 20px;
@@ -273,8 +270,19 @@ address > ul >li:hover{
 
 /* ---- Adaptive layout ---- */
 
-/* -- Media 1920px -- */
-@media (max-width: 1920px){
+/* -- Media (max-width: 1920px) -- */
+@media screen and (max-width: 1920px){
+    header{
+        height: 90px;
+    }
+    h1{
+        font-size: 1.6em;
+        line-height: 1;
+    }
+    .specialty{
+        font-size: 1.1em;
+        line-height: 1;
+    }
     .my_text{
         font-size: 1.3em;
     }
@@ -305,12 +313,176 @@ address > ul >li:hover{
     .contact-item > ul >li{
         width: 75px;
         height: 75px;
-        margin: 10px 40px;
-        font-size: 20px;
     }
     .contact-item > ul > li > a > img{
         width: 75px;
     }
 }
 
-/* -- Media px -- */
+/* -- Media (max-width: 1280px) -- */
+@media screen and (max-width: 1280px){
+    header{
+        height: 80px;
+        background: #000000cc;
+        padding: 15px 35px;
+    }
+    h1{
+        font-size: 1.4em;
+        line-height: 1.1;
+    }
+    .specialty{
+        font-size: 1em;
+        line-height: 1.1;
+    }
+    #menu > ul > li > a{
+        margin: 0 5px;
+        font-size: 1.1em;
+    }
+    .my_text{
+        font-size: 1.1em;
+    }
+    .my_photo{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        border: 2px solid #e68341ee;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .my_photo:hover{
+        transition: 0.5s;
+        box-shadow: 0px 0px 20px #fff;
+    }
+    .my_photo > img{
+        width: 165px;
+    }
+    .cv_link{
+        line-height: 1.4;
+        font-size: 1.3em;
+    }
+    .cv_container > span > a{
+        border-bottom: 2px solid #e68341ee;
+    }
+    .projects_container > div{
+        padding: 1vh 5vh;
+    }
+    .project_box > div{
+        border-radius: 15px;
+    }
+    .project_img{
+        width: 280px;
+        border-radius: 10px;
+    }
+    h3{
+        padding: 5px;
+        font-size: 1.1em;
+    }
+    .contact-info{
+        font-size: 1.2em;
+    }
+    .contact-item > ul >li{
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+    }
+    .contact-item > ul > li > a > img{
+        width: 70px;
+    }
+}
+
+/* -- Media (max-width: 1024px) -- */
+@media screen and (max-width: 1024px){
+    h1{
+        font-size: 1.35em;
+        line-height: 1.1;
+    }
+    .specialty{
+        font-size: 1em;
+        line-height: 1.1;
+    }
+    #menu > ul > li > a{
+        font-size: 1.05em;
+    }
+    .text_about{
+        padding-left: 7%;
+    }
+    .my_text{
+        font-size: 0.9em;
+    }
+    .cv_link{
+        line-height: 1.3;
+        font-size: 1.2em;
+    }
+    .projects_container > div{
+        padding: 2vh 3vh;
+    }
+    .project_img{
+        width: 260px;
+    }
+}
+
+/* -- Media (max-width: 768px) -- */
+@media screen and (max-width: 768px){
+    .about_container{
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .text_about{
+        width: 100%;
+        padding-left: 0;
+    }
+    .my_text{
+        font-size: 1.15em;
+        padding: 60px 110px;
+    }
+    .photo_about{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .my_photo{
+        width: 340px;
+        height: 340px;
+        border: 2px solid #e68341ee;
+    }
+    .my_photo:hover{
+        box-shadow: 0px 0px 20px #fff;
+    }
+    .my_photo > img{
+        width: 190px;
+    }
+    .projects_container{
+        flex-direction: row;
+    }
+    .projects_container > div{
+        flex-direction: column;
+        padding: 10vh 0;
+    }
+    .project_box > div:hover{
+        box-shadow: 0 0 15px #e68341ee;
+    }
+    h3{
+        padding: 5px;
+        font-size: 1.2em;
+    }
+    .project_img{
+        width: 280px;
+    }
+    .contact-item > ul >li{
+        display: inline-block;
+        margin: 10px 20px;
+    }
+}
+
+/* -- Media (max-width: 480px) -- */
+@media screen and (max-width: 480px){
+    
+}
+
+/* -- Media (max-width: 320px) -- */
+@media screen and (max-width: 320px){
+    
+}
