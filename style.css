@@ -515,6 +515,7 @@ address > ul >li:hover{
         height: 100px;
         background: #000000cc;
         padding: 3px 6px;
+        z-index: 1000;
     }
     h1{
         margin-bottom: 6px;
@@ -532,7 +533,7 @@ address > ul >li:hover{
         margin: 0 12px;
     }
     .my_text{
-        font-size: 1.05em;
+        font-size: 0.9em;
         padding: 5px 10px;
     }
     .photo_about{
@@ -541,12 +542,11 @@ address > ul >li:hover{
     }
     .my_photo{
         align-items: center;
-        width: 320px;
-        height: 320px;
-        overflow: hidden;
+        width: 250px;
+        height: 250px;
     }
     .my_photo > img{
-        width: 170px;
+        width: 150px;
         position: relative;
         top: 15px;
     }
