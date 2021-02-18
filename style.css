@@ -543,12 +543,12 @@ address > ul >li:hover{
         align-items: center;
         width: 320px;
         height: 320px;
+        overflow: hidden;
     }
     .my_photo > img{
         width: 170px;
         position: relative;
         top: 15px;
-        overflow: hidden;
     }
     .projects_container{
         height: auto;
