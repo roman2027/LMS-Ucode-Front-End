@@ -567,7 +567,7 @@ address > ul >li:hover{
         width: 340px;
     }
     .contacts_container > div{
-        margin-top: 90px;
+        margin-top: 50px;
     }
     .contact-item > ul{
         display: flex;
@@ -576,16 +576,16 @@ address > ul >li:hover{
         padding: 0 20px;
     }
     .contact-item > ul >li{
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
         display: inline-block;
-        margin: 15px 25px;
+        margin: 5px 8   px;
     }
     .contact-item > ul > li > a > img{
-        width: 60px;
+        width: 55px;
     }
     .contact-info{
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 }
 /* -- Media (max-width: 320px) -- */
