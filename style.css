@@ -274,7 +274,6 @@ h3{
 address > ul >li:hover{
     background: #e68341ee;
     box-shadow: 0 0 18px #e68341ee;
-    /* transition: background-color 0.6s; */
 }
 .contact-item > ul > li > a > img{
     width: 100px;
@@ -585,7 +584,10 @@ address > ul >li:hover{
     .contact-item > ul > li > a > img{
         width: 60px;
     }
-
+    .contact-info{
+        margin-bottom: 10px;
+    }
+}
 /* -- Media (max-width: 320px) -- */
 @media screen and (max-width: 320px){
     
