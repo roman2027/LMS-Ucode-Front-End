@@ -511,6 +511,7 @@ address > ul >li:hover{
         width: 190px;
     }
     .projects_container{
+        height: auto;
         flex-direction: row;
     }
     .projects_container > div{
@@ -560,10 +561,15 @@ address > ul >li:hover{
     }
     .about_container{
         padding-top: 100px;
+        padding-bottom: 10px;
     }
     .my_text{
         font-size: 0.9em;
         padding: 5px 10px;
+    }
+    .text_about{
+        align-items: start;
+        padding-top: 2vh;
     }
     .photo_about{
         margin-bottom: 0px;
@@ -582,6 +588,9 @@ address > ul >li:hover{
     .cv_container{
         padding-top: 100px;
     }
+    .cv_link{
+        font-size: 1em;
+    }
     .projects_container{
         flex-direction: column;
         padding-top: 100px;
@@ -599,7 +608,7 @@ address > ul >li:hover{
     }
     .contacts_container{
         padding-top: 100px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
     .contact-item > ul{
         display: flex;
@@ -611,7 +620,7 @@ address > ul >li:hover{
         width: 55px;
         height: 55px;
         display: inline-block;
-        margin: 5px 5px;
+        margin: 5px;
     }
     .contact-item > ul > li > a > img{
         width: 55px;
